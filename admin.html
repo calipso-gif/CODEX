@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administration — I-PROTECT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">I-PROTECT — Espace administrateur sécurisé</div>
+        <nav class="nav">
+          <a class="btn btn-outline" href="index.html">Voir le site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h1>Vue globale de l’activité</h1>
+        <p class="subtitle">
+          Tableau de bord administrateur pour piloter les clients, les paiements et les interventions.
+        </p>
+
+        <div class="grid-3">
+          <article class="card kpi">
+            <span>Nombre total de clients</span>
+            <span class="value">1 284</span>
+          </article>
+          <article class="card kpi">
+            <span>Abonnements actifs</span>
+            <span class="value">924</span>
+          </article>
+          <article class="card kpi">
+            <span>Abonnements en attente</span>
+            <span class="value">241</span>
+          </article>
+          <article class="card kpi">
+            <span>Abonnements suspendus</span>
+            <span class="value">119</span>
+          </article>
+          <article class="card kpi">
+            <span>Revenus mensuels estimés</span>
+            <span class="value">8 912 000 FCFA</span>
+          </article>
+          <article class="card kpi">
+            <span>Paiements récents (24h)</span>
+            <span class="value">73</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Gestion des clients</h2>
+        <p class="small">Voir tous les clients, leur formule et mettre à jour le statut de l’abonnement.</p>
+        <div style="overflow-x: auto">
+          <table>
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Téléphone</th>
+                <th>IMEI</th>
+                <th>Formule</th>
+                <th>Statut</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mariam Koné</td>
+                <td>iPhone 13</td>
+                <td>356789012345678</td>
+                <td>Plus</td>
+                <td><span class="tag tag-actif">Actif</span></td>
+                <td>
+                  <select>
+                    <option>Actif</option>
+                    <option>En attente</option>
+                    <option>Suspendu</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Adama Traoré</td>
+                <td>Samsung A54</td>
+                <td>352111998877665</td>
+                <td>Starter</td>
+                <td><span class="tag tag-attente">En attente</span></td>
+                <td>
+                  <select>
+                    <option>En attente</option>
+                    <option>Actif</option>
+                    <option>Suspendu</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Nadia Diallo</td>
+                <td>Redmi Note 12</td>
+                <td>353555444333222</td>
+                <td>Elite</td>
+                <td><span class="tag tag-suspendu">Suspendu</span></td>
+                <td>
+                  <select>
+                    <option>Suspendu</option>
+                    <option>Actif</option>
+                    <option>En attente</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <article class="card">
+          <h2>Gestion des paiements</h2>
+          <p class="small">Suivi des paiements effectués, en attente et association aux clients.</p>
+          <div style="overflow-x: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Référence</th>
+                  <th>Client</th>
+                  <th>Montant</th>
+                  <th>Statut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PAY-2026-00481</td>
+                  <td>Mariam Koné</td>
+                  <td>5 900 FCFA</td>
+                  <td><span class="tag tag-actif">Effectué</span></td>
+                </tr>
+                <tr>
+                  <td>PAY-2026-00482</td>
+                  <td>Adama Traoré</td>
+                  <td>2 900 FCFA</td>
+                  <td><span class="tag tag-attente">En attente</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin-top: 16px">Associer un paiement à un client</h3>
+          <div class="field">
+            <label for="ref">Référence paiement</label>
+            <input id="ref" type="text" placeholder="Ex. PAY-2026-00499" />
+          </div>
+          <div class="field" style="margin-top: 10px">
+            <label for="client">Client</label>
+            <select id="client">
+              <option>Mariam Koné</option>
+              <option>Adama Traoré</option>
+              <option>Nadia Diallo</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" style="margin-top: 12px">Associer</button>
+        </article>
+
+        <article class="card">
+          <h2>Gestion des interventions</h2>
+          <p class="small">Consultez les demandes et mettez à jour le statut de traitement.</p>
+          <div style="overflow-x: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Dossier</th>
+                  <th>Client</th>
+                  <th>Motif</th>
+                  <th>Statut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INT-1021</td>
+                  <td>Mariam Koné</td>
+                  <td>Écran fissuré</td>
+                  <td>
+                    <select>
+                      <option>En cours</option>
+                      <option>Terminé</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>INT-1022</td>
+                  <td>Nadia Diallo</td>
+                  <td>Batterie faible</td>
+                  <td>
+                    <select>
+                      <option>Terminé</option>
+                      <option>En cours</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

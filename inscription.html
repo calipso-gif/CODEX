@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription — I-PROTECT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">I-PROTECT</div>
+        <nav class="nav">
+          <a class="btn btn-outline" href="index.html">Accueil</a>
+          <a class="btn btn-dark" href="connexion.html">Se connecter</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Inscription client</h1>
+        <p class="subtitle">
+          Complétez ce formulaire pour créer votre compte et sélectionner votre formule d’abonnement.
+        </p>
+
+        <form id="form-inscription">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nom">Nom et prénom</label>
+              <input id="nom" name="nom" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="telephone">Numéro de téléphone</label>
+              <input id="telephone" name="telephone" type="tel" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="field">
+              <label for="modele">Modèle du téléphone</label>
+              <input id="modele" name="modele" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="imei">Numéro IMEI</label>
+              <input id="imei" name="imei" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="formule">Choix de la formule</label>
+              <select id="formule" name="formule" required>
+                <option value="starter">Starter — 2 900 FCFA / mois</option>
+                <option value="plus" selected>Plus — 5 900 FCFA / mois</option>
+                <option value="elite">Elite — 9 900 FCFA / mois</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="notice" style="margin-top: 14px">
+            I-PROTECT fournit un service d’assistance et de réparation téléphone par abonnement.
+            Ce service n’est pas une assurance.
+          </p>
+
+          <div class="btn-row" style="margin-top: 14px">
+            <button class="btn btn-primary" type="submit">Valider mon inscription</button>
+            <a class="btn btn-outline" href="index.html">Retour à l’accueil</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

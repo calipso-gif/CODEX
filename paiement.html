@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paiement — I-PROTECT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">I-PROTECT</div>
+        <nav class="nav">
+          <a class="btn btn-outline" href="dashboard-client.html">Espace client</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card" style="max-width: 700px; margin: 0 auto">
+        <h1>Paiement de l’abonnement</h1>
+        <p class="subtitle">
+          Finalisez votre règlement en ligne via l’intégration Genius Pay.
+        </p>
+
+        <div class="grid-2">
+          <div class="card" style="box-shadow: none; border: 1px solid #ececec">
+            <h3>Récapitulatif</h3>
+            <p><strong>Formule :</strong> <span data-formule>Plus — 5 900 FCFA / mois</span></p>
+            <p><strong>Montant à payer :</strong> <span data-montant>5 900 FCFA</span></p>
+            <p class="small">Passerelle prévue : Genius Pay API (connexion côté serveur à implémenter).</p>
+          </div>
+
+          <form id="form-paiement" class="card" style="box-shadow: none; border: 1px solid #ececec">
+            <h3>Confirmer le paiement</h3>
+            <div class="field">
+              <label for="methode">Méthode de paiement</label>
+              <select id="methode" required>
+                <option>Mobile Money</option>
+                <option>Carte bancaire</option>
+              </select>
+            </div>
+            <div class="field" style="margin-top: 10px">
+              <label for="numero">Numéro de paiement</label>
+              <input id="numero" type="text" required />
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top: 14px">
+              Payer maintenant
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
