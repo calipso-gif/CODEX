@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion — I-PROTECT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">I-PROTECT</div>
+        <nav class="nav">
+          <a class="btn btn-outline" href="index.html">Accueil</a>
+          <a class="btn btn-primary" href="inscription.html">S’inscrire</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card" style="max-width: 520px; margin: 0 auto">
+        <h1>Connexion à votre espace</h1>
+        <p class="subtitle">Accédez à votre suivi d’abonnement et à vos services I-PROTECT.</p>
+
+        <form id="form-connexion">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+          </div>
+
+          <div class="field" style="margin-top: 12px">
+            <label for="password">Mot de passe</label>
+            <input id="password" type="password" required />
+          </div>
+
+          <div class="btn-row" style="margin-top: 16px">
+            <button type="submit" class="btn btn-primary">Connexion</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
